@@ -19,6 +19,13 @@ import (
 // Registry of filesystems
 var Registry []*RegInfo
 
+// Basic description option
+var OptDescription = Option{
+	Name:     "description",
+	Help:     "Description of the remote",
+	Advanced: true,
+}
+
 // RegInfo provides information about a filesystem
 type RegInfo struct {
 	// Name of this fs

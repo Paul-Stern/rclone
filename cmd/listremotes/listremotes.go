@@ -19,7 +19,7 @@ var (
 func init() {
 	cmd.Root.AddCommand(commandDefinition)
 	cmdFlags := commandDefinition.Flags()
-	flags.BoolVarP(cmdFlags, &listLong, "long", "", listLong, "Show the type as well as names", "")
+	flags.BoolVarP(cmdFlags, &listLong, "long", "", listLong, "Show the type and the description as well as names", "")
 }
 
 var commandDefinition = &cobra.Command{
@@ -28,7 +28,7 @@ var commandDefinition = &cobra.Command{
 	Long: `
 rclone listremotes lists all the available remotes from the config file.
 
-When used with the ` + "`--long`" + ` flag it lists the types too.
+When used with the ` + "`--long`" + ` flag it lists the types and the descriptions too.
 `,
 	Annotations: map[string]string{
 		"versionIntroduced": "v1.34",
@@ -46,7 +46,8 @@ When used with the ` + "`--long`" + ` flag it lists the types too.
 		for _, remote := range remotes {
 			if listLong {
 				remoteType := config.FileGet(remote, "type")
-				fmt.Printf("%-*s %s\n", maxlen+1, remote+":", remoteType)
+				description := config.FileGet(remote, "description")
+				fmt.Printf("%-*s %s\n Description: %s\n", maxlen+1, remote+":", remoteType, description)
 			} else {
 				fmt.Printf("%s:\n", remote)
 			}

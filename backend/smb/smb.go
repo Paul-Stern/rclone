@@ -97,7 +97,7 @@ Set to 0 to keep connections indefinitely.
 			Help:     "Whether the server is configured to be case-insensitive.\n\nAlways true on Windows shares.",
 			Default:  true,
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

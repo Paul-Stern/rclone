@@ -205,7 +205,7 @@ facilitate remote troubleshooting of backend issues. Strict meaning of
 flags is not documented and not guaranteed to persist between releases.
 Quirks will be removed when the backend grows stable.
 Supported quirks: atomicmkdir binlist unknowndirs`,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

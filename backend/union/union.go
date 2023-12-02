@@ -53,7 +53,7 @@ func init() {
 			Name:    "cache_time",
 			Help:    "Cache time of usage and free space (in seconds).\n\nThis option is only useful when a path preserving policy is used.",
 			Default: 120,
-		}, {
+		}, fs.OptDescription, {
 			Name: "min_free_space",
 			Help: `Minimum viable free space for lfs/eplfs policies.
 

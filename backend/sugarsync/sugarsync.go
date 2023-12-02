@@ -176,7 +176,7 @@ func init() {
 			Help:      "Sugarsync deleted folder id.\n\nLeave blank normally, will be auto configured by rclone.",
 			Advanced:  true,
 			Sensitive: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

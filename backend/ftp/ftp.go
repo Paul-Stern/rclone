@@ -187,7 +187,7 @@ If this is set and no password is supplied then rclone will ask for a password
 			myUser:myPass@localhost:9005
 		`,
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

@@ -234,7 +234,7 @@ provider.`,
 				Value: "pca",
 				Help:  "OVH Public Cloud Archive",
 			}},
-		}}, SharedOptions...),
+		}, fs.OptDescription}, SharedOptions...),
 	})
 }
 

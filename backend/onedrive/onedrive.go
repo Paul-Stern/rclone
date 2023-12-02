@@ -306,7 +306,7 @@ rclone.
 				Help:  "None - don't use any hashes",
 			}},
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:    "av_override",
 			Default: false,
 			Help: `Allows download of files the server thinks has a virus.

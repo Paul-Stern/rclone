@@ -224,7 +224,7 @@ shared folder.`,
 			Default:  defaultMinSleep,
 			Help:     "Minimum time to sleep between API calls.",
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

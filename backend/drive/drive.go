@@ -639,7 +639,7 @@ having trouble with like many empty directories.
 `,
 			Advanced: true,
 			Default:  true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

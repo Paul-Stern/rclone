@@ -449,7 +449,7 @@ Example:
 	myUser:myPass@localhost:9005
 	`,
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:    "copy_is_hardlink",
 			Default: false,
 			Help: `Set to enable server side copies using hardlinks.

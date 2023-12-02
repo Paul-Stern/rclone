@@ -204,7 +204,7 @@ be set manually to something like: https://XXX.sharefile.com
 `,
 			Advanced: true,
 			Default:  "",
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

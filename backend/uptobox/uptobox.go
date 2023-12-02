@@ -51,7 +51,7 @@ func init() {
 			Name:     "private",
 			Advanced: true,
 			Default:  false,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

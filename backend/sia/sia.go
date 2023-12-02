@@ -60,7 +60,7 @@ Can be found in the apipassword file located in HOME/.sia/ or in the daemon dire
 Sia daemon requires the 'Sia-Agent' user agent by default for security`,
 			Default:  "Sia-Agent",
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

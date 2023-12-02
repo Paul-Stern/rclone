@@ -2515,7 +2515,7 @@ knows about - please make a bug report if not.
 `, "|", "`"),
 			Default:  fs.Tristate{},
 			Advanced: true,
-		},
+		}, fs.OptDescription,
 		}})
 }
 

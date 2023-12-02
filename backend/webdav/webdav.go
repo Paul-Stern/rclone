@@ -118,7 +118,7 @@ func init() {
 			Name:     config.ConfigEncoding,
 			Help:     configEncodingHelp,
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name: "headers",
 			Help: `Set HTTP headers for all transactions.
 

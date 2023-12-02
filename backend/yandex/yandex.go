@@ -71,7 +71,7 @@ func init() {
 			Help:     "Delete files permanently rather than putting them into the trash.",
 			Default:  false,
 			Advanced: true,
-		}, {
+		}, fs.OptDescription, {
 			Name:     config.ConfigEncoding,
 			Help:     config.ConfigEncodingHelp,
 			Advanced: true,

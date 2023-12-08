@@ -290,6 +290,7 @@ func Register(info *RegInfo) {
 	if info.Prefix == "" {
 		info.Prefix = info.Name
 	}
+	info.Options = append(info.Options, OptDescription)
 	Registry = append(Registry, info)
 	for _, alias := range info.Aliases {
 		// Copy the info block and rename and hide the alias and options

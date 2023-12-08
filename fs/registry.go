@@ -19,8 +19,8 @@ import (
 // Registry of filesystems
 var Registry []*RegInfo
 
-// OptDescription is a basic description option
-var OptDescription = Option{
+// optDescription is a basic description option
+var optDescription = Option{
 	Name:     "description",
 	Help:     "Description of the remote",
 	Advanced: true,
@@ -290,7 +290,7 @@ func Register(info *RegInfo) {
 	if info.Prefix == "" {
 		info.Prefix = info.Name
 	}
-	info.Options = append(info.Options, OptDescription)
+	info.Options = append(info.Options, optDescription)
 	Registry = append(Registry, info)
 	for _, alias := range info.Aliases {
 		// Copy the info block and rename and hide the alias and options

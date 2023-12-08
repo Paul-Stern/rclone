@@ -19,7 +19,7 @@ import (
 // Registry of filesystems
 var Registry []*RegInfo
 
-// Basic description option
+// OptDescription is a basic description option
 var OptDescription = Option{
 	Name:     "description",
 	Help:     "Description of the remote",

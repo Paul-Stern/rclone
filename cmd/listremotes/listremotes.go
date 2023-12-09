@@ -52,7 +52,7 @@ When used with the ` + "`--long`" + ` flag it lists the types and the descriptio
 			if listLong {
 				remoteType := config.FileGet(remote, "type")
 				description := config.FileGet(remote, "description")
-				fmt.Printf("%-*s %-*s Description: %s\n", maxlen+1, remote+":", maxlentype+1, remoteType, description)
+				fmt.Printf("%-*s %-*s %s\n", maxlen+1, remote+":", maxlentype+1, remoteType, description)
 			} else {
 				fmt.Printf("%s:\n", remote)
 			}

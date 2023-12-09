@@ -38,16 +38,21 @@ When used with the ` + "`--long`" + ` flag it lists the types and the descriptio
 		remotes := config.FileSections()
 		sort.Strings(remotes)
 		maxlen := 1
+		maxlendesc := 1
 		for _, remote := range remotes {
 			if len(remote) > maxlen {
 				maxlen = len(remote)
+			}
+			description := config.FileGet(remote, "description")
+			if len(description) > maxlendesc {
+				maxlendesc = len(description)
 			}
 		}
 		for _, remote := range remotes {
 			if listLong {
 				remoteType := config.FileGet(remote, "type")
 				description := config.FileGet(remote, "description")
-				fmt.Printf("%-*s %s\n Description: %s\n", maxlen+1, remote+":", remoteType, description)
+				fmt.Printf("%-*s %s\n Description: %-*s\n", maxlen+1, remote+":", remoteType, maxlendesc, description)
 			} else {
 				fmt.Printf("%s:\n", remote)
 			}
